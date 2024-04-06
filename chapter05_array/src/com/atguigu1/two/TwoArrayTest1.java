@@ -36,7 +36,7 @@ public class TwoArrayTest1 {
         // 内存元素默认值：
         System.out.println(arr4[0][0]); // 报错：NullPointerException
 
-        String[][] arr5 = new String[3][2];
+        String[][] arr5 = new String[3][];
         // 外层元素默认值：
         System.out.println(arr5[0]); // null
         // 内存元素默认值：
