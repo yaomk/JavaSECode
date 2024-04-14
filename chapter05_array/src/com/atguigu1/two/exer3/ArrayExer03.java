@@ -1,7 +1,7 @@
 package com.atguigu1.two.exer3;
 
 /**
- * ClassName: ArrayExer03
+ * ClassName: YangHuTest
  * Description: 二维数组存储数据，并遍历
  *
  * @Author yao
