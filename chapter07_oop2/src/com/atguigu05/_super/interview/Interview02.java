@@ -20,7 +20,7 @@ public class Interview02 {
 
         System.out.println();
         s.setInfo("大儿子");
-        System.out.println(f.getInfo()); // 大儿子
+        System.out.println(f.getInfo()); // father
         System.out.println(s.getInfo()); // 大儿子
         s.test(); // 大儿子 大儿子
     }
