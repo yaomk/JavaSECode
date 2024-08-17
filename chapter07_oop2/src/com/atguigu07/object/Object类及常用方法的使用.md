@@ -72,8 +72,30 @@ System.out.println(f1 == i4); //true
 * 使用范围：只能使用在引用数据类型上。
 * 具体使用：对于类来说，重写equals()和不重写equals()的区别。
 
+### toString()的使用
 
+#### Object类中的 toString() 的定义：
 
+```java
+public String toString() {
+  return getClass().getName() + "@" + Integer.toHexString(hashCode());
+}
+```
+
+#### 开发中的使用场景
+
+* 我们平时在调用 `System.out.println()` 打印对象引用变量时，其实就调用了对象的 `toString()` 方法
+
+#### 子类使用说明
+
+* 自定义的类，在没有重写Object类的toString()的情况下，默认返回的是当前对象的地址值。
+* 像 `String`、`File`、`Date` 或包装类等 Object 的子类，它们都重写了 Object类 的 `toString()`，在调用 `toString()`
+  时，返回当前对象的实体内容。
+
+#### 开发中使用说明
+
+* 习惯上，开发中对于自定义的类在调用 `toString()` 时，也希望显示其对象的实体内容，而非地址值。这时候就需要重写 Object类 的
+  `toString()`。
 
 
 
