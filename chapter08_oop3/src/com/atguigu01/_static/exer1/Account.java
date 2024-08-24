@@ -1,4 +1,4 @@
-package com.atguigu._static.exer1;
+package com.atguigu01._static.exer1;
 
 /**
  * ClassName: Account

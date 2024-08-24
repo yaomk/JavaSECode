@@ -1,4 +1,4 @@
-package com.atguigu._static;
+package com.atguigu01._static;
 
 /**
  * ClassName: ChineseTest

@@ -1,4 +1,4 @@
-package com.atguigu._static.interview;
+package com.atguigu01._static.interview;
 
 /**
  * ClassName: StaticTest
