@@ -26,7 +26,7 @@ public interface CompareA {
 
     default void method3() {
         System.out.println("CompareA 默认方法 method3()");
-        method5();
+        method5(); // 接口中其他的默认方法调用私有方法，私有方法相当于抽离公用逻辑
     }
 
     default void method4() {
