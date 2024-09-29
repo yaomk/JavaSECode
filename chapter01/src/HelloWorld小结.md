@@ -1,4 +1,4 @@
-> JDK: Java Develoer's Kit
+> JDK: Java Developer's Kit
 > JRE: Java Runtime Environment
 > JVM: Java Virtual Machine
 
@@ -11,8 +11,8 @@
 
 ### 1. java程序编写和执行的过程：
 * 步骤1：编写。将java代码编写在.java结尾的源文件中
-* 步骤2：编译。针对.java结尾的源文件进行编译操作。格式：javac 源文件名.java [-encoding utf-8]
-* 步骤3：运行。针对于编译后生成的字节码文件（.class结尾），进行解释运行。格式：java 字节码文件名
+* 步骤2：编译。针对.java结尾的源文件进行编译操作。格式：`javac 源文件名.java [-encoding utf-8]`
+* 步骤3：运行。针对于编译后生成的字节码文件（.class结尾），进行解释运行。格式：`java 字节码文件名(不带后缀)`
 * 先编译，再运行
 > windows 环境不区分大小写。
 
