@@ -46,7 +46,12 @@ public class StringDemo {
     public void test4() {
         String s1 = "hello";
         String s2 = "hello";
-
+        boolean b = s1 == s2;
+        Integer n1 = 127;
+        Integer n2 = 127;
+        boolean b1 = n1 == n2;
+        System.out.println(b1);
+        
         String s3 = s2.replace('l', 'r');
         System.out.println(s1); // hello
         System.out.println(s2); // hello

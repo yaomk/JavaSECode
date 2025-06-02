@@ -56,3 +56,49 @@ jdk9开始：为了节省内存空间，做了优化
 * 情况2：`常量 + 变量` 或 `变量 + 变量`：都会通过 new 的方式创建一个新的字符串，返回堆空间此字符串对象的地址。
 * 情况3：调用字符串的 `intern()`：返回的都是字符串常量池中字面量的地址。
 * 情况4：`concat()`：源码得知 concat 方法返回一个通过 new 的方式创建的新的字符串，返回堆空间中此字符串对象的地址。
+
+### String 的构造器和常用方法
+
+#### 构造器
+
+* `public String()`: 初始化新创建的 String 对象，已使其表示空字符序列。
+* `public String(String original)`: 初始化一个新创建的 String 对象，使其表示一个与参数相同的字符序列，换句话说：新创建的字符串是该参数字符串的副本。
+* `public String(char[] value)`: 通过当前参数中的字符数组来构造新的 String。
+* `public String(char[], int offset, int count)`: 通过字符数据的一部分来构造新的 String。
+* `public String(byte[] bytes)`: 通过使用平台默认字符集解码当前参数中的字节数组来构造新的 String。
+* `public String(byte[****] bytes, String charsetName)`: 通过使用指定的字符集解码当前参数中的字节数组来构造新的 String。
+
+#### 常用方法
+
+* `boolean isEmpty()`: 字符串是否为空
+* `int length()`: 返回字符串的长度
+* `String concat()`: 拼接
+  *` boolean equals(Object obj)`: 比较字符串是否相等，区分大小写
+* `boolean equalsIgnoreCase(Object obj)`: 比较字符串是否相等，不区分大小写
+* `int compareTo(String other)`: 比较字符串大小，区分大小写，按照 Unicode 编码值比较大小
+* `int compareToIgnoreCase(String other)`: 比较字符串大小，不区分大小写
+* `String toLowerCase()`: 将字符串中大写字母转为小写字母
+* `String toUpperCase()`: 将字符串中小写字母转为大写字母
+* `String trim()`: 去掉字符串前后的空白字符
+* `public String intern()`: 结果在常量池中共享
+* `boolean contains(CharSequence s)`: 是否包含 s
+* `int indexOf(xx)`: 从前往后查找当前字符串中的xx，返回首次出现时的索引，没有则返回-1。
+* `int indexOf(String str, int fromIndex)`: 返回指定子字符串在此字符串中首次出现处的索引，从指定的索引开始。
+* `int lastIndexOf()`: 从后往前查找当前字符串中xx，返回最后一次出现的索引，没有则返回-1。
+* `int lastIndexOf(String str, int fromIndex)`: 返回指定子字符串在此字符串中最后一次出现处的索引，从指定的索引开始反向搜索。
+
+####  
+
+* `String substring(int beginIndex)`: 返回一个新的字符串，它是此字符串从 beginIndex 处开始截取到最后的一个子字符串。
+* `String substring(int beginIndex, int endIndex)`: 返回一个新的字符串，它是此字符串从 beginIndex 开始截取到
+  endIndex（不包含）的一个子字符串。（左闭右开）
+
+#### 和字符、字符数组相关
+
+* `char charAt(index)`: 返回 index 位置的字符。
+* `char[] toCharArray()`: 将此字符串转为一个新的字符串数组。
+* `static String valueOf(char[] data)`: 返回指定数组中表示该字符序列的 String。
+* `static String valueOf(char[] data, int offset, int count)`: 返回指定数组中表示该字符序列的 String。
+* `static String copyValueOf(char[] data)`: 返回指定数组中表示该字符序列的 String。
+* `static String copyValueOf(char[] data, int offset, int count)`: 返回指定数组中表示该字符序列的 String。
+
