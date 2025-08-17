@@ -51,8 +51,7 @@ jdk9开始：为了节省内存空间，做了优化
 
 ### String的连接操作：`+`
 
-* 情况1：`常量 + 常量`：结果仍然存储在字符串常量池中，返回此字面量的地址。注：此时的常量可能是字面量，或是 **final 修饰的常量
-  **。
+* 情况1：`常量 + 常量`：结果仍然存储在字符串常量池中，返回此字面量的地址。注：此时的常量可能是字面量，或是 **final 修饰的常量**。
 * 情况2：`常量 + 变量` 或 `变量 + 变量`：都会通过 new 的方式创建一个新的字符串，返回堆空间此字符串对象的地址。
 * 情况3：调用字符串的 `intern()`：返回的都是字符串常量池中字面量的地址。
 * 情况4：`concat()`：源码得知 concat 方法返回一个通过 new 的方式创建的新的字符串，返回堆空间中此字符串对象的地址。
@@ -73,7 +72,7 @@ jdk9开始：为了节省内存空间，做了优化
 * `boolean isEmpty()`: 字符串是否为空
 * `int length()`: 返回字符串的长度
 * `String concat()`: 拼接
-  *` boolean equals(Object obj)`: 比较字符串是否相等，区分大小写
+* `boolean equals(Object obj)`: 比较字符串是否相等，区分大小写
 * `boolean equalsIgnoreCase(Object obj)`: 比较字符串是否相等，不区分大小写
 * `int compareTo(String other)`: 比较字符串大小，区分大小写，按照 Unicode 编码值比较大小
 * `int compareToIgnoreCase(String other)`: 比较字符串大小，不区分大小写
