@@ -35,6 +35,15 @@ public class StringGetCountTest {
         }
         return count;
     }
+
+    /**
+     * 最长公共子序列
+     * <p>
+     * 给定两个字符串{@code text1}, {@code text2}，返回这两个字符串最长公共子序列的长度，如果不存在公共子序列，返回 0.
+     * @param text1 String
+     * @param text2 String
+     * @return int
+     */
     public int longestCommonSubsequence(String text1, String text2) {
         int m = text1.length(), n = text2.length();
         int[][] dp = new int[m + 1][n + 1];
