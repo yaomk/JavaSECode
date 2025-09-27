@@ -96,4 +96,23 @@ public class StringMethodTest1 {
         System.out.println(s1);
         System.out.println(s2);
     }
+
+    @Test
+    public void test6() {
+        String s1 = "hello";
+
+        String s2 = s1.replace('l', 'w');
+        System.out.println(s1);
+        System.out.println(s2); // hewwo
+
+        String s3 = s1.replace("ll", "www");
+        System.out.println(s3); // hewwwo
+
+        String s4 = s1.replaceAll("[hl]", "w");
+        System.out.println(s4); // wewwo
+
+        String s5 = s1.replaceFirst("[l]", "w");
+        System.out.println(s5); // hewlo
+
+    }
 }

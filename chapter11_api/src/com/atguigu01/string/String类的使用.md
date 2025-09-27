@@ -86,7 +86,7 @@ jdk9开始：为了节省内存空间，做了优化
 * `int lastIndexOf()`: 从后往前查找当前字符串中xx，返回最后一次出现的索引，没有则返回-1。
 * `int lastIndexOf(String str, int fromIndex)`: 返回指定子字符串在此字符串中最后一次出现处的索引，从指定的索引开始反向搜索。
 
-####  
+####  字符串截取相关
 
 * `String substring(int beginIndex)`: 返回一个新的字符串，它是此字符串从 beginIndex 处开始截取到最后的一个子字符串。
 * `String substring(int beginIndex, int endIndex)`: 返回一个新的字符串，它是此字符串从 beginIndex 开始截取到
@@ -100,4 +100,13 @@ jdk9开始：为了节省内存空间，做了优化
 * `static String valueOf(char[] data, int offset, int count)`: 返回指定数组中表示该字符序列的 String。
 * `static String copyValueOf(char[] data)`: 返回指定数组中表示该字符序列的 String。
 * `static String copyValueOf(char[] data, int offset, int count)`: 返回指定数组中表示该字符序列的 String。
+* `boolean StartsWith(xx)`: 测试此字符串是否以指定的前缀开始。
+* `boolean StartsWith(String prefix, int toffset)`: 测试此字符串从指定索引位置开始的子字符串是否以指定的前缀开始。
+* `boolean endsWith(xx)`: 测试此字符串是否以指定的后缀结束。
 
+#### 字符串替换相关
+
+* `String replace(char oldChar, char newChar)`: 返回一个新的字符串，它是通过 newChar 替换此字符串中出现的所有 oldChar 得到的。不支持正则。
+* `String replace(charSequence target, CharSequence replacement)`: 使用指定的字面值替换序列此字符串所有匹配字面值目标序列的子字符串。
+* `String replaceAll(String regex, String replacement)`: 使用给定的 replacement 替换此字符串所有匹配给定的正则表达式的子字符串。
+* `String replaceFirst(String regex, String replacement)`: 使用给定的 replacement 替换此字符串匹配给定的正则表达式的第一个子字符串。
