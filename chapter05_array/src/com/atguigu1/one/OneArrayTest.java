@@ -32,7 +32,7 @@ public class OneArrayTest {
 
         // 其他正确的方式
         int[] arr = new int[4];
-        int arr1[] = new int[4]; // c语音的格式来定义数据
+        int arr1[] = new int[4]; // c语言的格式来定义数据
         int[] arr2 = {1,2,3,4}; // 类型推断
 
         // 错误的方式
