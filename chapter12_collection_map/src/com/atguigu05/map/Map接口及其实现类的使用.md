@@ -53,6 +53,16 @@ java.util.Map: 存储一对一对的数据（key-value键值对，(x1,y1)、(x2,
   * `遍历 value 集：Collection values()`
   * `遍历 entry 集：Set entrySet()`
 
+## TreeMap 的使用
+* 底层使用红黑树存储
+* 可以按照添加的 key-value 中的key元素的指定的属性的大小顺序进行遍历
+* 需要考虑使用：①自然排序②定制排序
+* 要求：向 `TreeMap` 添加的 key 必须是同一个类型的对象
+
+## Hashtable 与 Properties 的使用
+* `Properties`: 是 `Hashtable` 的子类，其 `key` 和 `value` 都是 `String` 类型的，常用来处理属性文件
+
+
 ### 面试题：
 1. 区别 `HashMap` 和 `Hashtable`。
     * 线程安全：`Hashtable` 线程安全（方法同步），`HashMap` 非线程安全
