@@ -28,3 +28,26 @@ java.util.Collection: 存储一个一个的数据
 ## 添加到 HashSet/LinkedHashSet中元素的要求：
 * 要求元素所在的类要重写两个方法：`hashCode()` 和 `equals()`
 * 同时，要求 `equals()` 和 `hashCode()` 要保持一致性！通常使用 idea 自动生成的两个方法的重写即可。
+
+## TreeSet 的使用
+
+### TreeSet 底层的数据结构
+
+底层数据结构：红黑树。
+
+### TreeSet 添加数据后的特点
+
+可以按照添加的元素的指定的属性的大小顺序进行遍历。
+
+### 向 TreeSet 中添加的元素的要求：
+
+* 要求添加到 `TreeSet` 中的元素必须是同一个类型的对象，否则会报 `ClassCastException`。
+* 添加的元素需要考虑排序：① 自然排序 ② 定制排序
+
+### 判断数据是否相同的标准
+
+* 不再是考虑 `hashCode()` 和 `equals()` 方法了，也就意味着添加到 `TreeSet` 中的元素所在的类不需要重写 `hashCode()` 和
+  `equals()` 方法了。
+* 比较元素大小、比较元素是否相等的标准就是考虑自然排序或定制排序中：`compareTo()` 和 `compare()` 的返回值。
+   * 如果 `compareTo()` 或 `compare()` 返回 `0`，则认为元素相等。由于 `TreeSet` 中不能存放相同的元素，则后一个相等的元素就不能添加到
+     `TreeSet` 中。 
