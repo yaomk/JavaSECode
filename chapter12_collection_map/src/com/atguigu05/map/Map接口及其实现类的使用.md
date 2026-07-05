@@ -12,7 +12,8 @@ java.util.Map: 存储一对一对的数据（key-value键值对，(x1,y1)、(x2,
 
 ## HashMap 中元素的特点
 * `HashMap` 中所有的 `key` 彼此之间是不可重复的、无序的。所有的key就构成一个 `Set` 集合。`key` 所在的类要重写 `hashCode()` 和 `equals()`。
-* `HashMap` 中的 `value` 彼此之间是可重复的、无序的。所有的 `value` `就构成了一个Collection` 集合。`value` 所在的类要重写 `equals()`。
+* `HashMap` 中的 `value` 彼此之间是可重复的、无序的。所有的 `value` 就构成了一个 `Collection` 集合。`value` 所在的类要重写
+  `equals()`。
 * `HashMap` 中的一个 `key-value`，就构成了一个 `entry`。
 * `HashMap` 中所有的 `entry` 彼此之间是可不重复的、无序的。所有的 `entry` 就构成了一个 `Set` 集合。
 
