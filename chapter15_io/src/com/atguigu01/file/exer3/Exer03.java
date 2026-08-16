@@ -6,7 +6,7 @@ import java.io.File;
  * ClassName: Exer03
  * Description:
  * 1.遍历指定文件目录下的所有文件的名称，包括子文件目录中的文件。
- * 2. 计算指定我呢见目录占用空间的大小
+ * 2. 计算指定文件目录占用空间的大小
  *
  * @Author yao
  * @Create 2026/7/12 11:06
